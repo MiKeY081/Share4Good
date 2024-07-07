@@ -1,0 +1,1 @@
+export const publicImages= ["/cover1.png","/cover2.png","/cover3.png","/cover4.png"]

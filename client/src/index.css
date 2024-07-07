@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.headerlink {
+  @apply hover:text-blue-300 cursor-pointer transition-all duration-75;
+}
+.bottomLine {
+  position: relative;
+  width: 100%;
+}
+.bottomLine::before {
+  content: "";
+  height: 2px;
+  background-color: green;
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  width: 0%;
+  z-index: 10;
+  transition: 0.4s;
+}
+.bottomLine:hover::before {
+  width: 100%;
+}
+
+.contactIcons {
+  @apply text-blue-400 hover:text-blue-300 transition duration-300;
+}
+
+/* YourComponent.css */
+.button {
+  @apply bg-green-600 relative flex justify-center items-center font-semibold text-white rounded-2xl px-6 py-3 border-green-600 shadow-2xl cursor-pointer overflow-hidden transition-all duration-500 z-10 w-fit h-fit hover:text-slate-100;
+}
+
+.button:before {
+  @apply content-[''] block absolute top-0 left-0 w-0 h-full bg-green-500 rounded-2xl transition-all opacity-0;
+}
+
+.button:hover:before {
+  @apply w-full opacity-100 -z-10;
+  transform-origin: left center;
+  transform: scaleX(1);
+}
